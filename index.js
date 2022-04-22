@@ -26,6 +26,7 @@ const users = [
 ];
 
 app.get("/users", (req, res) => {
+  // filter by search query parameter
   if (req.query.name) {
     const search = req.query.name.toLowerCase();
     const matched = users.filter((user) =>
